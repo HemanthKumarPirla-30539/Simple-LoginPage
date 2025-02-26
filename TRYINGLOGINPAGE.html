@@ -1,0 +1,69 @@
+<html>
+<head><title>LOGIN</title>
+</head>
+<body bgcolor="antiquewhite">
+<form id="loginform" >
+<center>
+	 <h2 style="font-family: 'Times New Roman'; font-size: 24px; color: skyblue; text-decoration: underline;">
+                Welcome! Voting Registration
+            </h2>
+</center><br>
+	<b><font face="Times New Roman" style="display:inline-block; margin-right: 5px;">Enter First Name:</font></b> 
+</font>
+
+	<input type="text" placeholder="Enter Name" style="width: 200px; " maxlength="50">
+
+
+<b><font face="Times New Roman" style=" margin-right:30px;">Middle Name:</font></b>
+
+	<input type="text" style="width:200px;" maxlength="30"><br><br>
+
+<b><font face="Times New Roman" style="display:inline-block; margin-right:47px;" >Last Name:</font>
+
+	<input type="text" placeholder="Surname" style="width:200px;" >
+
+<b><font face="Times New roman" style="display:inline-block; margin-right:98px;" >Age:</font>
+
+	<input type="number" style="width:200px;" min="18" max="90"><br><br>
+
+<b><font face="Times New Roman" style="margin-right:58px;">Aadhaar:</font>
+
+	<input type="text" style="width :200px;" maxlength="12px" pattern="\d{12}" title="Aadhaar Must be 12-digit and contains only numbers">
+
+<b><font face="Times New roman" style="margin-right:85px;">Email:</font>
+<input type="text" style="width:200px;" ><br><br>
+
+<br><br><center>
+<input type="reset" value="Reset" style="background-color: gb(150,200,140); width:150px; height:50px; color:blue;font-size:20px;cursor:pointer;">
+
+	<button type="button"  onclick="validateForm()" style="background-color:rgb(150,200,140); width:150px; height:50px; color:white; font-size:20px; border:none; cursor:pointer;">Submit
+
+	
+</button>
+</center>
+</form>
+<script>
+function validateForm(){
+const form=document.getElementById('loginform');
+const inputs=form.querySelectorAll('input');
+let isFormValid=true;
+inputs.forEach(input => {
+if(!input.value.trim()){
+	isFormValid=false;
+}
+});
+
+
+if(!isFormValid){
+	alert('Please fill The Form');
+}else{
+
+alert('Sucessfully Registerd');
+}
+}
+</script>
+
+
+
+</body>
+</html>
